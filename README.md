@@ -42,3 +42,5 @@ You can get 100% of the grades with 10 points, distributed as follows over the 7
 `validMove()` : 1 point
 
 `_validMove()` : 1 point
+
+Once you're done, please upload your zip file containing the entire project on Cate.

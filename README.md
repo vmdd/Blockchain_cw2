@@ -5,7 +5,7 @@ In coursework 2, you are given a decentralized application for a tic-tac-toe gam
 ## Instructions
 Once you completed the contract (`contracts/TicTacToe.sol`), you can run `docker build -t tic-tac-toe .` to build the tic-tac-toe docker image.
 
-We provide several test cases to test the basic functions of your contract. You can run `docker run tic-tac-toe npm test` to check the test results. You are encourage to extend the tests. Our grading script will follow the similar way (i.e., to test your smart contract and grade based on the test results).
+We provide several test cases to test the basic functions of your contract. You can run `docker run tic-tac-toe npm test` to check the test results. You are encourage to extend the tests. Our grading script will follow the similar way (i.e., to test your smart contract and grade based on the test results). Prerequisite: please (install docker)[https://docs.docker.com/desktop/] on your system.
 
 To set up and play your tic-tac-toe game, you can
 1. start ganache test chain

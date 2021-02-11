@@ -29,7 +29,7 @@ To set up and play your tic-tac-toe game, you can:
 
 You can get 100% of the grades with 10 points, distributed as follows over the 7 functions of the contract:
 
-`_threeInALine(` : 1 point
+`_threeInALine()` : 1 point
 
 `_getStatus()` : 4 points
 
@@ -39,6 +39,6 @@ You can get 100% of the grades with 10 points, distributed as follows over the 7
 
 `_myTurn()` : 1 point
 
-`validMove(` : 1 point
+`validMove()` : 1 point
 
-`_validMove(` : 1 point
+`_validMove()` : 1 point

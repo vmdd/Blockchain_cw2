@@ -16,4 +16,4 @@ To set up and play your tic-tac-toe game, you can
 
 `docker run -p 8080:8080 -d tic-tac-toe`
 
-3. open `http://localhost:8080/` in two separate web browsers with each a separate Metamask installed and enjoy the game. On Chrome you can create **two different users** and install Metamask in each. You'll need to configure Metamask to connect to your local chain as well (which we leave up to you as part of the exercise).
+3. open `http://localhost:8080/` in two separate web browsers with each a separate Metamask installed and enjoy the game. On Chrome you can create **two different users** and install Metamask in each. You'll need to configure Metamask to connect to your local chain as well (which is not graded but we leave up to you as part of the exercise for your own testing).

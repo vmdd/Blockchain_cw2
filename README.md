@@ -24,3 +24,15 @@ To set up and play your tic-tac-toe game, you can:
 `docker run -p 8080:8080 -d tic-tac-toe`
 
 3. open `http://localhost:8080/` in two separate web browsers with each a separate Metamask installed, and enjoy the game. On Chrome you can create **two different users** and install Metamask in each. You'll need to configure Metamask to connect to your local chain as well (which is not graded but we leave this up to you as part of the exercise for your own testing).
+
+# Grading Scheme
+
+You can get 100% of the grades with 10 points, distributed as follows over the 7 functions of the contract:
+
+`_threeInALine(` : 1 point
+`_getStatus()` : 4 points
+`_checkStatus()` : 1 point
+`myTurn()` : 1 point
+`_myTurn()` : 1 point
+`validMove(` : 1 point
+`_validMove(` : 1 point

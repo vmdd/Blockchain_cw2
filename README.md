@@ -15,11 +15,11 @@ Prerequisite: please [install docker](https://docs.docker.com/desktop/) on your 
 
 To set up and play your tic-tac-toe game, you can:
 
-1. start ganache test chain
+1. start the ganache test chain
 
 `docker run -p 8545:8545 -d trufflesuite/ganache-cli:latest -g 0`
 
-2. start web server
+2. start the web server
 
 `docker run -p 8080:8080 -d tic-tac-toe`
 

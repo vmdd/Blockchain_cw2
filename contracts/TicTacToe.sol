@@ -31,6 +31,9 @@ contract TicTacToe {
      */
     uint[9] private board;
 
+    //keep count of number of moves
+    uint private n_moves = 0;
+
     /**
       * @dev Deploy the contract to create a new game
       * @param opponent The address of player2
@@ -49,6 +52,7 @@ contract TicTacToe {
       **/    
     function _threeInALine(uint a, uint b, uint c) private view returns (bool){
         /*Please complete the code here.*/
+        return (board[a] == board[b]) && (board[b] == board[c]); 
     }
 
     /**
@@ -58,6 +62,29 @@ contract TicTacToe {
      */
     function _getStatus(uint pos) private view returns (uint) {
         /*Please complete the code here.*/
+        // this is called after the turn changed already, so the winner is turn%2 + 1
+        
+        //check vertical
+        if(_threeInALine(pos, (pos+3)%9, (pos+6)%9))
+          return turn%2 + 1;
+        
+        //check horizontal
+        uint row = pos/3;
+        if(_threeInALine(pos, (pos+1)%3 + 3*row, (pos+2)%3 +3*row))
+          return turn%2 + 1;
+
+        //check diag
+        if(pos%2==0 && board[4]!=0){
+          if(_threeInALine(0, 4, 8) || _threeInALine(2, 4, 6))
+          return turn%2 + 1;
+        }
+
+        //check draw
+        if(n_moves>=9)
+          return 3;
+
+        //default
+        return 0;
     }
 
     /**
@@ -67,6 +94,10 @@ contract TicTacToe {
      */
     modifier _checkStatus(uint pos) {
         /*Please complete the code here.*/
+        require(status == 0);
+        _;
+        n_moves+=1;
+        status = _getStatus(pos);
     }
 
     /**
@@ -75,6 +106,7 @@ contract TicTacToe {
      */
     function myTurn() public view returns (bool) {
        /*Please complete the code here.*/
+       return players[turn-1] == msg.sender;
     }
 
     /**
@@ -83,6 +115,9 @@ contract TicTacToe {
      */
     modifier _myTurn() {
       /*Please complete the code here.*/
+      require(myTurn());
+      _;
+      turn = turn%2 + 1;
     }
 
     /**
@@ -92,6 +127,7 @@ contract TicTacToe {
      */
     function validMove(uint pos) public view returns (bool) {
       /*Please complete the code here.*/
+      return board[pos]==0 && pos>=0 && pos<=8;
     }
 
     /**
@@ -100,6 +136,8 @@ contract TicTacToe {
      */
     modifier _validMove(uint pos) {
       /*Please complete the code here.*/
+      require(validMove(pos));
+      _;
     }
 
     /**
